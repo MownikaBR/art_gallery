@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+        body {font-family: Arial;}
+        
+        /* Style the tab */
+        .tab {
+          overflow: hidden;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #ddd;
+        }
+        
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ccc;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+        }
+        img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+        </style>
+<head>
+<title>Mownika's Arts Blog</title>
+</head>
+<body>
+    <h1>Mownika's <span style="color:red ;">Art</span> Blog</h1>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'MandalaArt')">Mandala Art</button>
+        <button class="tablinks" onclick="openCity(event, 'Blog')">Blog</button>
+        <button class="tablinks" onclick="openCity(event, 'About')">About</button>
+      </div>
+      
+      <div id="MandalaArt" class="tabcontent">
+        <h3>Mandala Art</h3>
+        <div>
+            <p>I Started painting at very early age,espically drawing nostalgic cartoon character</br> and superhero figures</p>
+            <p>when i grew up,i engaged in studies and other personal work. After my graduation,i dedvoted several months for painting and drawing</br> before starting my artistic journey from mandala art.</p>
+            <p>when it comes to mandala art,i focus primarly on teaching mandala and healing mandala art.</br> but i paint oyher subjects too.</p>
+            <p>painting is a challenge and a craft that combines knowledge and experience.</p>
+        </div>
+
+      </div>
+      
+      <div id="Blog" class="tabcontent">
+        <div>
+            <h2>Drawing and photography Blog</h2>
+            <h3>Categories</h3>
+
+            <h5>1.Ganesh art</h5>
+            <img src="image1.jpg" style="width:45%">
+            <h5>2.Girl painting</h5>
+            <img src="image5.jpg" style="width:45%">
+            <h5>3.Classical dancer</h5>
+            <img src="image2.jpg" style="width:45%">
+            <h5>4.Odissi dancer</h5>
+            <img src="image4.jpg" style="width:45%">
+            <h5>5.Manipuri</h5>
+            <img src="image6.jpg" style="width:45%">
+            <h5>6.Bharatanatyam</h5>
+            <img src="image3.jpg" style="width:45%">
+
+            
+        </div> 
+      </div>
+      
+      <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <div>
+            <img src="mownika img.jpg" style="width:40%">
+            <p>I am Mownika and currently. I'm 23 year old. i have completed my BSc. I'm bacically intersed in art like drawing,
+                painting and photoghics. My art basically inclued Mandala art and pen drawing. I love drawing picturs where it keeps 
+                my mind peace and gives me happiness. Now, art has become passion to me.
+            </p>
+            <h4>Small glimes of my art</h4>
+            <div class="row">
+                <div class="column">
+                  <img src="image1.jpg" style="width:100%">
+                </div>
+                <div class="column">
+                  <img src="image2.jpg" style="width:100%">
+                </div>
+              </div>
+        </div>
+        <p>For more information</p>
+        <a href="">mownikareddy1024@gmail.com</a> Contact here<br>
+        
+      </div>
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+        
+
+</body>
+</html>
